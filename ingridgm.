@@ -1,0 +1,57 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+/*
+project_ingridgm.
+ver. pr1
+@ddaiem
+*/
+
+int playing(void) {
+	int i[19];
+	int j[19];
+
+	int i, j;
+
+	printf("(x,y):");
+	scanf("%d, %d", &i, &j);
+
+	if (i > 19) {
+		printf("property should be under 19.\n");
+		printf("reenter the i property:");
+		scanf("%d", &i);
+	}
+	if (j > 19) {
+		printf("property should be under 19.\n");
+		printf("reenter the i property:");
+		scanf("%d", &j);
+	}
+}
+
+int setting(void)
+{
+    int n, m, i, j;
+    scanf("%d", &n);
+    scanf("%d", &m);
+    n = 3 * n;
+
+    for (i = 0; i < n; i++) {
+        if (i % 2 == 0) {
+            printf("+");
+        }
+        for (j = 0; j < m; j++) {
+
+            if (i % 2 != 0 && i != n - 1) {
+                printf("|  ");
+            }
+            if (i % 2 == 0) {
+
+                printf("--+");
+            }
+        }
+        if (i % 2 != 0 && i != n - 1) {
+            printf("|  ");
+        }
+
+        printf("\n");
+    }
+}
